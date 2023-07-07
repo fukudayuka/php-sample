@@ -22,7 +22,7 @@ if ($mysqli->connect_error) {
 
 } else {
     //接続成功時の処理
-  $query  = "INSERT INTO `form` (`name1`, `name2`, `name3`, `name4`, `address`, `tel`, `seat_1`, `seat_2`, `time`, `eiga`, `payment`, `member_num`, `jobs`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  $query  = "INSERT INTO `form` (`name1`, `name2`, `name3`, `name4`, `address`, `tel`, `otona`, `kodomo`, `time`, `eiga`, `payment`, `kaiinn`, `Profession`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt   = $mysqli->prepare($query);
   try{
     $stmt->bind_param(
